@@ -8,3 +8,6 @@ Note: you will need a few packages to read and edit las files in python
   1. you will need to be in a python 3.5 environment while installing
   2. you will need to install a package called msgpack *pip install msgpack*
   3. you can now install laspy *pip install laspy*
+
+Team:
+Stephen Escarzaga
