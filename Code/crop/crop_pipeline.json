@@ -3,7 +3,7 @@
     "file-input.las",
     {
       "type":"filters.crop",
-      "bounds":"([319822,4092261],[320037,4092061])"
+      "bounds":"([319802,4092264],[320049,4092062])"
     },
     {
       "type":"writers.las",
