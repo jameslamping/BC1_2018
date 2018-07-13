@@ -1,10 +1,7 @@
 json = """
 {
   "pipeline":[
-    {
-        "type":"readers.greyhound",
-        "url":"http://na.greyhound.io/resource/dk-z/read?depthBegin=1&depthEnd=29&bounds=[11045777.34375,-11852109.375,223441.40625,11055492.1875,-11842394.53125,233156.25]&compress=true&scale=0.01&offset=[1295630,7596240,-2280]"
-    },
+    # Path to LAS FILE,
     {
       "type":"writers.gdal",
       "filename":"NEON_TEAK_DSM.tif",
@@ -20,4 +17,4 @@ json = """
 import pdal
 pipeline = pdal.Pipeline(json)
 pipeline.validate()
-pipeline.execute
+pipeline.execute()
