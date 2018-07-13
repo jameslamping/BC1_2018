@@ -27,6 +27,20 @@ json = """
     {
       "type":"filters.range",
       "limits":"Classification[2:2]"
+    },
+    {
+      "gdaldriver":"GTiff",
+      "output_type":"all",
+      "resolution":"1.0",
+      "data_type":"float",
+      "type": "writers.gdal",
+      "radius": 0.5,
+      "filename":"NEON_TEAK_DTM.tif"
     }
   ]
 }"""
+
+import pdal
+pipeline = pdal.Pipeline(json)
+pipeline.validate()
+pipeline.execute
