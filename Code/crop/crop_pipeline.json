@@ -1,0 +1,13 @@
+{
+  "pipeline":[
+    "file-input.las",
+    {
+      "type":"filters.crop",
+      "bounds":"([-214942,14120549],[-214735,14120347])"
+    },
+    {
+      "type":"writers.las",
+      "filename":"BC1_crop_17.las"
+    }
+  ]
+}
