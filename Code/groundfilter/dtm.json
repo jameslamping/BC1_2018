@@ -1,0 +1,27 @@
+json = """
+{
+  "pipeline":[
+    {
+      "type":"filters.reprojection",
+      "out_srs":"EPSG:32611"
+    },
+    {
+      "type":"filters.range",
+      "limits":"Classification[2:2]"
+    },
+    {
+      "gdaldriver":"GTiff",
+      "output_type":"mean",
+      "resolution":"1.0",
+      "data_type":"float",
+      "type": "writers.gdal",
+      "radius": 0.5,
+      "filename":"NEON_TEAK_DTM.tif",
+    }
+  ]
+}"""
+
+import pdal
+pipeline = pdal.Pipeline(json)
+pipeline.validate()
+pipeline.execute()
