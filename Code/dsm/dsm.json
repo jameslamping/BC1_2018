@@ -1,4 +1,4 @@
-json = """
+"""
 {
   "pipeline":[
     # Path to LAS FILE,
@@ -13,8 +13,3 @@ json = """
     }
   ]
 }"""
-
-import pdal
-pipeline = pdal.Pipeline(json)
-pipeline.validate()
-pipeline.execute()
