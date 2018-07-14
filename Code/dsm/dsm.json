@@ -5,7 +5,7 @@ json = """
     {
       "type":"writers.gdal",
       "filename":"NEON_TEAK_DSM.tif",
-      "dimension":"Elevation",
+      "dimension":"Z",
       "data_type":"float",
       "output_type":"max",
       "resolution":1.0,
